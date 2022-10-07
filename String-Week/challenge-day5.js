@@ -7,10 +7,10 @@ const filterPun = (string) => {
                     (!el.match(/dog|bark|bone/gi)) && // doesn't include bark, bone, dog
                     (el.length % 5) && // length isn't a multiple of 5
                     ((el.charCodeAt(0) + el.charCodeAt(el.length-1)) % 2) && //sum of first and last char odd
-                    (el[Math.floor(el.length / 2) + 1] != /e/gi) && //e not after middle of string
+                    (el[Math.floor(el.length / 2) + 1].toLowerCase() != 'e') && //e not after middle of string
                     (!(el.match(/[a-z]/g).length % 2)) && // even number of lowercase letters
                     (el.match(/[A-Z]/g).length > 1) && // at least two capital letters
-                    (!el.match(/S/g)) // no uppercased s
+                    (!el.match(/S/g)) // no uppercase s
                 )
     return arr
 }
