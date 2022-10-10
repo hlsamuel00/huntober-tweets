@@ -15,4 +15,4 @@ const filterPun = (string) => {
     return arr
 }
 
-console.log(filterPun(submissions))
+console.log(filterPun(submissions).length)

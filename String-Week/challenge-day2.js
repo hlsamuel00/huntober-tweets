@@ -2,7 +2,7 @@ const catMixUp = (string) => {
     string = string.slice(string.indexOf('c') + 1) // remove everything before 'c'
             .replace(new RegExp('Eek!', 'g'), '') // remove 'Eek!'s from string
             .split('').reverse().join('') // reverse string
-    const substrings = string.split('v').map((el,i) => i ? el.slice(0,1) : el) 
+    const substrings = string.split('v').map((el,i) => el.slice(0,1)) 
         // split strings and determine first letters in other substrings  
             
     return substrings
